@@ -1,0 +1,18 @@
+<h2>Agent Details</h2> 
+
+<hr/>
+<div *ngIf="monagent">
+  <div>
+    <label><b>First Name: </b></label> {{monagent.name}}
+  </div>
+   <div>
+    <label><b>Last Name: </b></label> {{monagent.prenom}}
+  </div>
+   <div>
+    <label><b>Age: </b></label> {{monagent.age}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="Agent_list()" class="btn btn-primary">Back to Agent List</button><br>

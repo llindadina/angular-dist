@@ -1,0 +1,27 @@
+<h3>Find Agent By Name</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="text" class="form-control" id="age" required [(ngModel)]="age" name="age">
+    </div>
+ 
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+  <ul>
+  <li *ngFor="let agent of listagent">
+     <div contrainer=""><a>ID  numero: {{agent.id}}  </a><br>
+     <a>Nom de l'agent: {{agent.name}} </a><br>
+     <a>Prenom de l'agent: {{agent.prenom}} </a><br>
+      <a>----------------------------</a>
+     </div>
+ 
+  </li>
+</ul>
+
+<br>
+<br>
+<button (click)="Agent_list()" class="btn btn-primary">Back to Agent List</button><br>
+</div>

@@ -1,0 +1,31 @@
+
+<h3>Update Customer</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="monclient.name" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="monclient.prenom" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="monclient.email" name="emailId">
+    </div>
+      <div class="form-group">
+      <label for="name">Age</label>
+      <input type="text" class="form-control" id="age" required [(ngModel)]="monclient.age" name="age">
+    </div>
+      <div class="form-group">
+      <label for="name">Nombre de souscriptions</label>
+      <input type="text" class="form-control" id="achat" required [(ngModel)]="monclient.achat" name="achat">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+     <a mat-button routerLink="/customers">Cancel</a>
+  </form>
+</div>

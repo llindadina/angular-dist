@@ -1,0 +1,29 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Liste des agences</h2>
+    </div>
+    <div class="agent-list">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+          <th>Agence_Id</th>
+          <th>Nom de l'agence</th>
+          <th>More</th>
+
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of malistagence | async">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            
+            
+              <!--les boutons envoient vers customer-update et customer-details-->
+            <td>    <button (click)="agenceDetails(c.id)" class="btn btn-info" style="margin-left: 10px">Details Agence</button>
+            <button (click)="deleteAgence(c.id)" class="btn btn-danger" style="margin-left: 10px" >Delete Agence </button></td>
+         
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

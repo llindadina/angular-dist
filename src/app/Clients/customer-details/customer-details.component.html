@@ -1,0 +1,22 @@
+<p>customer-details works!</p>
+<h2>Customer Details</h2> 
+
+<hr/>
+<div *ngIf="monclient">
+  <div>
+    <label><b>First Name: </b></label> {{monclient.name}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{monclient.prenom}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{monclient.email}}
+  </div>  
+   <div>
+    <label><b>Nbr souscriptions: </b></label> {{monclient.achat}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="Client_list()" class="btn btn-primary">Back to Customer List</button><br>

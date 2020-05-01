@@ -1,0 +1,41 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2> LISTE DES CLIENTS</h2>
+    </div>
+    <div class="customer-list">
+      <table class="table table-striped">
+        <thead>
+        <tr>  <button (click)="customerAdd()" class="btn btn-info" style="margin-left: 10px">Add Client</button>
+          </tr> 
+          <br>
+          <tr>
+
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Nbr souscription</th>
+              <th>More</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of malistclient | async">
+            <td>{{c.name}}</td>
+            <td>{{c.prenom}}</td>
+            
+            <td>{{c.age}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.achat}}</td>
+            
+              <!--les boutons envoient vers customer-update et customer-details-->
+            <td>    <button (click)="customerDetails(c.id)" class="btn btn-info" style="margin-left: 10px">Details Client</button>
+               <button (click)="customerUpdate(c.id)" class="btn btn-secondary" style="margin-left: 10px">Update Client</button>
+                <!--les bouton envoie vers  customer-list car cest juste un delete-->
+               <button (click)="deleteCustomer(c.id)" class="btn btn-danger" style="margin-left: 10px">Delete Client</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

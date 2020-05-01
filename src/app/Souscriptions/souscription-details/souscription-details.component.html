@@ -1,0 +1,35 @@
+<p>souscription-details works!</p>
+<h2>Soucription Details</h2> 
+
+<hr/>
+<div *ngIf="masous">
+  <div>
+    <label><b>Identifiant : </b></label> {{masous.id}}
+  </div>
+  <div>
+    <label><b>Date de mise en effet : </b></label> {{masous.beginsouscription}}
+  </div>
+  <div>
+    <label><b>Date de fin : </b></label> {{masous.endsouscription}}
+  </div>  
+   <div>
+    <label><b>Prix : </b></label> {{masous.price | currency:'USD'}}
+  </div>
+  <div><label>Proprietaire :</label><br>
+    <label><b>Identifiant : </b></label> {{masous.owner.id}}<br>
+      <label><b>Nom : </b></label> {{masous.owner.name}}<br>
+      <label><b>Prenom : </b></label> {{masous.owner.prenom}}<br>
+      <label><b>Email : </b></label> {{masous.owner.email}}<br>
+
+  </div>
+  <div><label>Contrat: </label><br>
+    <label><b>Identifiant : </b></label> {{masous.cont.id}}<br>
+    <label><b>Nom du contrat : </b></label> {{masous.cont.contrat}}<br>
+     <label><b>Garanties   : </b></label> {{masous.cont.garantie}}<br>
+    
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="Souscription_list()" class="btn btn-primary">Back to Souscription List</button><br>

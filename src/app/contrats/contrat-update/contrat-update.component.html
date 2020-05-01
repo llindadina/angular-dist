@@ -1,0 +1,20 @@
+
+<h3>Update Contrat</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nom du Contrat </label>
+      <input type="text" class="form-control" id="nom" required [(ngModel)]="contrat.contrat" name="nom">
+    </div>
+
+
+    <div class="form-group">
+      <label for="name">Description de la Garantie</label>
+      <input type="text" class="form-control" id="garantie" required [(ngModel)]="contrat.garantie" name="garantie">
+    </div>
+
+   
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<h2>Contrat Details</h2> 
+
+<hr/>
+<div *ngIf="contrat">
+  <div>
+    <label><b>Identifiant du Contrat: </b></label> {{contrat.id}}
+  </div>
+
+  <div>
+    <label><b>Nom Contrat : </b></label> {{contrat.contrat}}
+  </div>
+    
+  <div>
+    <label><b>Description Garantie: </b></label> {{contrat.garantie}}
+  </div>  
+
+</div>
+
+<br>
+<br>
+<button (click)="Contrat_list()" class="btn btn-primary">Back to Contrat List</button><br>

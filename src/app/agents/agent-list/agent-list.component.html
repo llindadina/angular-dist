@@ -1,0 +1,35 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2> LISTE DES EMPLOYES</h2>
+    </div>
+    <div class="agent-list">
+      <table class="table table-striped">
+        <thead>
+          <tr> 
+            <button (click)="searchAgent()" class="btn btn-success" style="margin-left: 10px">Search Agent</button>
+       
+         </tr><br>
+          <tr>
+          <th>Employes_Id</th>
+          <th>Nom</th>   
+           <th>Specialite_Id</th> 
+            <th>Specialite_Name</th> 
+             <th>More</th> 
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of malistagent | async">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+                        <td>{{c.spec.id}}</td>
+          <td>{{c.spec.name}}</td>
+          <!--<td>{{c.spec.id}}</td>
+          <td>{{c.spec.name}}</td>-->
+              <!--les boutons envoient vers customer-update et customer-details-->
+            <td>    <button (click)="agentDetails(c.id)" class="btn btn-info" style="margin-left: 10px">Details Employe</button></td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

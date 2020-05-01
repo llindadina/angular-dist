@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: front-project
+  name: front-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front-project
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: front-project
+    spec:
+      containers:
+      - image: llinda/front-project
+        name: front-project
+        resources: {}
+status: {}

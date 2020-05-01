@@ -1,0 +1,18 @@
+
+body {
+  background-color: lightgrey;
+  color: blue;
+}
+
+
+a{  color: white;
+    
+}
+
+.ng {
+  background-image:  url("../../../src/assets/img/cover-asset.jpg");
+  background-color: transparent;
+   background-size: cover;
+  min-height: 380px;
+
+}

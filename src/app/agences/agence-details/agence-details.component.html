@@ -1,0 +1,18 @@
+<h2>Agent Details</h2> 
+
+<hr/>
+<div *ngIf="monagence">
+  <div>
+    <label><b>Nom de l'agence: </b></label> {{monagence.name}}
+  </div>
+  <div>
+    <label><b>Numero de la succursale : </b></label> {{monagence.succ.id}}
+  </div>
+  <div>
+    <label><b>Nom de la succursale: </b></label> {{monagence.succ.reference}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="Agence_list()" class="btn btn-primary">Back to Agent List</button><br>

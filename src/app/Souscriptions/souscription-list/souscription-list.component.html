@@ -1,0 +1,41 @@
+
+<div class="panel panel-primary"  >
+    <div class="panel-heading">
+      <h2> LISTE DES SOUSCRIPTIONS</h2>
+       
+    </div>
+
+    <div class="souscription-list">
+      <table class="table table-striped">
+        <thead>
+          <tr><button (click)="souscriptionAdd()" class="btn btn-info" style="margin-left: 10px">Add Souscription</button>
+          </tr> <br>
+          <tr>
+          <!--<th>Id contrat</th>-->
+         <th>Souscription ID</th>
+         
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of malistsous | async">
+
+          <!--   <td>{{co.id}}</td>-->
+             <td>{{s.id}}</td>
+         <!--<td>{{s.beginsouscription}}</td>
+          <td>{{s.endsouscription}}</td>
+          <td>{{s.price}}</td>
+          -->
+             <td>
+           <button (click)="souscriptionDetails(s.id)" class="btn btn-info" style="margin-left: 10px">Details Souscription</button>
+          
+           
+             <button (click)="deleteSouscription(s.id)" class="btn btn-danger" style="margin-left: 10px">Delete Souscription</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+     
+
+    </div>
+  </div>
